@@ -28,5 +28,7 @@ app.post('/youtube', (req,res) => {
     .catch(err => console.log(err))
 })
 
+const port = process.env.PORT || 8080;
+app.listen(port, () => console.log("Puerto en uso: 8080"))
 
-app.listen(8080, () => console.log("Puerto en uso: 8080"))
+app.set('port', process.env.PORT || 4000);
