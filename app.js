@@ -28,6 +28,10 @@ app.post('/youtube', (req,res) => {
     .catch(err => console.log(err))
 })
 
+app.get('/contacto', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'contacto.html'))
+})
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log("Puerto en uso: 8080"))
 
